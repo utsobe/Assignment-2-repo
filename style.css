@@ -14,11 +14,11 @@ body {
     color: white;
     padding: 10px 40px;
     border-radius: 50px;
-    transition: 0.5s;
+    transition: .5s;
 }
 
-.influencer a:hover .btn{
-    transform: scale(12px);
+.btn:hover {
+    margin-left: 20px;
 }
 
 /* -------------------------------
@@ -79,6 +79,14 @@ nav {
     position: relative;
 }
 
+.front-img {
+    transition: .5s;
+}
+
+.front-img:hover {
+    transform: scale(1.2) rotate(27deg);
+}
+
 .bg-img {
     position: absolute;
     top: -30px;
@@ -108,6 +116,14 @@ nav {
         inset 0px -11px 8px -10px rgba(204, 204, 204, 0.5); 
 }
 
+.logos img {
+    transition: .5s;
+}
+
+.logos img:hover {
+    transform: translateY(-15px);
+}
+
 /* popular collection */
 .popular-collection {
     display: flex;
@@ -134,6 +150,11 @@ nav {
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    transition: .3s;
+}
+
+.collection:hover {
+    margin: -20px;
 }
 
 .collection-img img {
@@ -216,6 +237,7 @@ nav {
 footer {
     background-color: #0A0826;
     height: 239px;
+    width: 100%;
     text-align: center;
 }
 
@@ -238,7 +260,159 @@ footer {
     margin: 0 10px;
 }
 
-/* Mobile Devices */
+/* -------------------------------
+        Media Query
+------------------------------- */
+
+/* Mobile Devices Query*/
 @media only screen and (max-width:576px) {
-    
+    /* nav query */
+    nav {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    nav .logo-text a {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    /* influencer query */
+    .influencer {
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 0;
+        justify-items: center;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .influencer-content {
+        text-align: center;
+        margin-bottom: 60px;
+        width: 100%;
+        margin-left: px;
+    }
+
+    .influencer-content .influencer-title {
+        font-size: 28px;
+    }
+
+    .influencer-content p {
+        font-size: 14px;
+    }
+
+    .influencer-img img{
+        height: 257px;
+    }
+
+    .bg-img {
+        display: none;
+    }
+
+    /* company logos query */
+
+    .company-logos {
+        display: none;
+    }
+
+    /* popular collection query */
+    .popular-collection {
+        margin-top: 50px;
+    }
+
+    .collections {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+
+    /* join-us query */
+    .form {
+        width: 80%;
+    }
+
+    .footer-text h2 {
+        font-size: 16px;
+    }
+
+    .footer-text p {
+        font-size: 12px;
+    }
+
+}
+
+/* Tablet Devices Query */
+@media only screen and (min-width: 577px) and (max-width: 820px) {
+    /* nav query */
+    nav {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    nav .logo-text a {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    /* influencer query */
+    .influencer {
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 0;
+        justify-items: center;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .influencer-content {
+        text-align: center;
+        margin-bottom: 60px;
+        width: 60%;
+    }
+
+    .influencer-content .influencer-title {
+        font-size: 28px;
+    }
+
+    .influencer-content p {
+        font-size: 14px;
+    }
+
+    .influencer-img img{
+        height: 257px;
+    }
+
+    .bg-img {
+        display: none;
+    }
+
+    /* company logos query */
+
+    .company-logos {
+        display: none;
+    }
+
+    /* popular collection query */
+    .popular-collection {
+        margin-top: 50px;
+    }
+
+    .collections {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    /* join-us query */
+    .form {
+        width: 60%;
+    };
+
 }
