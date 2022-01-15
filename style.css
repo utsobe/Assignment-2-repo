@@ -78,3 +78,25 @@ nav {
     top: -30px;
     z-index: -1;
 }
+
+/* -------------------------------
+        main styles
+------------------------------- */
+/* comopany logo styles */
+.company-logos {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.logos {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    align-items: center;
+    width: 1110px;
+    height: 110px;
+    box-shadow: 
+        inset 0px 11px 8px -10px rgba(204, 204, 204, 0.5),
+        inset 0px -11px 8px -10px rgba(204, 204, 204, 0.5); 
+}
